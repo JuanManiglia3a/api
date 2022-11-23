@@ -6,6 +6,10 @@ from azure_blob_functions.blob import delete_blob, download_blob, get_blob, uplo
 
 blob_routes = APIRouter()
 
+@blob_routes.get("/")
+def home():
+    return {'HOLA':'triplealpha'}
+
 
 @blob_routes.post("/upload")
 async def upload(container: str = Form(...), file: UploadFile = File(...)):
