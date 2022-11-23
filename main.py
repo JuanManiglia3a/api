@@ -4,5 +4,9 @@ from routes.blobs import blob_routes
 
 app = FastAPI()
 
+@blob_routes.get("/")
+def home():
+    return "{'Hola':'API'}"
+
 app.include_router(blob_routes, prefix="/storage/blob")
 # app.include_router(container_routes, prefix="/storage/container")

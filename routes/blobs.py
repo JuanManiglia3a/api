@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Form, UploadFile, File
 import os
+from dotenv import load_dotenv
 
 from azure_blob_functions.blob import delete_blob, download_blob, get_blob, upload_blob
 
