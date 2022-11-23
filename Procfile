@@ -1,1 +1,1 @@
-web: uvicorn main:app --reload --env-file=.env
+web: uvicorn main:app --reload
