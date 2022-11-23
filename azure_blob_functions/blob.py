@@ -5,8 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv('.env')
 
-class Config(object):
-    AZURE_STORAGE_CONNECTION_STRING = os.getenv('AZURE_STORAGE_CONNECTION_STRING') 
+AZURE_STORAGE_CONNECTION_STRING = os.getenv('AZURE_STORAGE_CONNECTION_STRING') 
 
 from responses.response_json import response_json
 from responses.response_stream import response_stream
