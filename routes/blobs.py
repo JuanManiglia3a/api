@@ -8,7 +8,7 @@ blob_routes = APIRouter()
 
 @blob_routes.get("/")
 def home():
-    return {'HOLA':'triplealpha'}
+    return {'Hola':'API'}
 
 
 @blob_routes.post("/upload")
