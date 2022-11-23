@@ -4,7 +4,7 @@ from routes.blobs import blob_routes
 
 app = FastAPI()
 
-@blob_routes.get("/")
+@app.get("/")
 def home():
     return "{'Hola':'API'}"
 
