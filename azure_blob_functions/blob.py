@@ -4,9 +4,10 @@ from os import getenv
 
 from responses.response_json import response_json
 from responses.response_stream import response_stream
+import os
 
 blob_service_client = BlobServiceClient.from_connection_string(
-    getenv("AZURE_STORAGE_CONNECTION_STRING"))
+    os.getenv("AZURE_STORAGE_CONNECTION_STRING"))
 
 
 def upload_blob(filename: str, container: str, data: BinaryIO):
